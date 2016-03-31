@@ -1,0 +1,57 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+
+<script id="names_template" type="text/x-handlebars-template">
+    {% raw %}
+    <h4>Будь ласка, вкажіть, як ім'я №1 відноситься до імені №2</h4>
+    <table class="table dossier table-bordered">
+        <tr>
+            <th>Ім'я №1</th>
+            <td>{{ candidate }}</td>
+        </tr>
+        <tr>
+            <th>Ім'я №2</th>
+            <td>{{ candidate }}</td>
+        </tr>
+    </table>
+
+    <div class="row fill-the-blanks">
+        <h4>Загальна інформація</h4>
+        <div class="col-md-8">
+            <textarea name="general-info" placeholder="Введіть дату(и) народження з пошуку ПІБ в базі nomer.ws, а також адресу(а) прописки та телефон(и)" maxlength="10000"></textarea>
+
+            <h4>Родинні зв'язки</h4>
+            <textarea name="family-info" placeholder="Введіть отриману раніше адресу з Nomer.WS та перенесіть в це поле людей, які прописані там де й кандидат, вказавши їх дату народження" maxlength="10000"></textarea>
+        </div>
+        <div class="col-md-4 buttons-block">
+            <form action="http://nomer.ws/allukraina/" method="POST" target="_blank">
+                <input type="hidden" value="{{ lastname_ru }}" name="lastName" />
+                <input type="hidden" value="{{ firstname_ru }}" name="firstName" />
+                <input type="hidden" value="{{ patronymic_ru }}" name="middleName" />
+
+                <input type="hidden" value="" name="city" />
+                <input type="hidden" value="" name="nd" />
+                <input type="hidden" value="" name="nkv" />
+                <input type="hidden" value="" name="phone" />
+                <input type="hidden" value="" name="street" />
+                <input type="hidden" value=" Найти " name="searchButton" />
+
+                <button class="btn btn-block btn-social btn-reddit" type="submit" title="На сайті nomer.ws">
+                    <i class="fa fa-home"></i> Шукати «{{ lastname_ru }} {{ firstname_ru }} {{ patronymic_ru }}»
+                </button>
+            </form>
+
+            <hr/>
+            <h5>Спробуйте також пошукати на</h5>
+
+            <a class="btn btn-block btn-social btn-misc" href="http://ua24ua.com/" target="_blank" title="Дані фізичних осіб">
+                <i class="fa fa-user"></i> Дані фізичних осіб на ua24ua.com
+            </a>
+        </div>
+    </div>
+    {% endraw %}
+</script>
+
+<div id="out">
+
+</div>
+
