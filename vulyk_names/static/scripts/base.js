@@ -1,12 +1,30 @@
 $(function() {
     var template = Handlebars.compile($('#names_template').html()),
-        output = $("#out");
+        output = $("#out"),
+        res = output.find("input[name=result]");
+
+    $(document).bind('keydown', '1', function() {
+        $(".selection button").eq(0).click();
+    }).bind('keydown', '2', function() {
+        $(".selection button").eq(1).click();
+    }).bind('keydown', '3', function() {
+        $(".selection button").eq(2).click();
+    }).bind('keydown', '4', function() {
+        $(".selection button").eq(3).click();
+    }).bind('keydown', '5', function() {
+        $(".selection button").eq(4).click();
+    });
 
     $(document.body).on("vulyk.next", function(e, data) {
-        output.html(template(data.result.task.data));       
+        output.html(template(data.result.task.data));
+        res.val("");
     }).on("vulyk.save", function(e, callback) {
-        callback($('textarea, input[type=checkbox]').serializeJSON());
+        callback(res.serializeJSON());
         $("html, body").animate({ scrollTop: 0 }, "slow");
+    }).on("click", ".selection button", function(e) {
+        var el = $(this).closest("button");
+        res.val(el.data("value"));
+        $("a#save-button").click();
     }).on("vulyk.skip", function(e, callback) {
         callback();
         $("html, body").animate({ scrollTop: 0 }, "slow");

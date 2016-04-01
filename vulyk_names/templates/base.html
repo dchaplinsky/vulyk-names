@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+
+<script id="names_template" type="text/x-handlebars-template">
+    {% raw %}
+    <h4 class="task-head">Будь ласка, вкажіть, як ім'я <strong>{{ candidate.name }}</strong> відноситься до імені <strong>{{ src }}</strong></h4>
+
+    <div class="btn-group-vertical selection" role="group">
+        <button type="button" class="btn btn-primary btn-lg" data-value="IS_MISTYPE_OF"><span class="pull-left">Це опечатка</span> <span class="pull-right">[1]</span></button>
+        <button type="button" class="btn btn-danger btn-lg" data-value="NONE"><span class="pull-left">Ніяк (це інше ім'я)</span> <span class="pull-right">[2]</span></button>
+        <button type="button" class="btn btn-info btn-lg" data-value="IS_VARIANT_OF"><span class="pull-left">Це варіант написання</span> <span class="pull-right">[3]</span></button>
+        <button type="button" class="btn btn-info btn-lg" data-value="IS_DIMINUTIVE_OF"><span class="pull-left">Це зменьшувальна форма</span> <span class="pull-right">[4]</span></button>
+        <button type="button" class="btn btn-info btn-lg" data-value="IS_DIFFERENT_GENDER"><span class="pull-left">Це те саме ім'я іншого роду</span> <span class="pull-right">[5]</span></button>
+    </div>
+
+    {% endraw %}
+</script>
+
+<div id="out">
+    <input type="hidden" name="result" value="" />
+</div>

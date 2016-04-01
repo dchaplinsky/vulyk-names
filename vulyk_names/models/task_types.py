@@ -22,7 +22,7 @@ class NamesTaskType(AbstractTaskType):
     helptext_template = 'help.html'
     type_name = 'names_task'
 
-    redundancy = 2
+    redundancy = 1
 
     JS_ASSETS = ['static/scripts/handlebars.js',
                  'static/scripts/jquery.serializejson.js',

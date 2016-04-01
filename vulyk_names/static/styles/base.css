@@ -1,0 +1,46 @@
+h4 {
+    text-align: center;
+}
+
+.dossier {
+    width: 400px;
+    margin: 30px auto;
+}
+
+#user-stats dl,
+#user-stats dt,
+#user-stats dd {
+    display: inline-block;
+    text-align: center;
+}
+
+#user-stats {
+    text-align: center;
+}
+
+#out {
+    background: white none repeat scroll 0 0;
+    margin: 10px auto 20px;
+    max-width: 980px;
+    padding: 20px;
+    color: #555;
+}
+
+.task-head strong {
+    font-size: 1.7em;
+    font-weight: bold;
+}
+
+.selection {
+    margin: 30px auto;
+    display: block;
+    width: 350px;
+}
+
+.selection button {
+    text-align: left;
+}
+
+#save-button {
+    display: none;
+}
