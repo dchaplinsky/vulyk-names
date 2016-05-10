@@ -29,8 +29,7 @@ setup(
     packages=[
         'vulyk_names',
         'vulyk_names.models',
-        'vulyk_names.static',
-        'vulyk_names.views'
+        'vulyk_names.static'
     ],
     package_dir={'vulyk_names':
                  'vulyk_names'},
