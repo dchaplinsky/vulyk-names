@@ -29,8 +29,7 @@ setup(
     packages=[
         'vulyk_names',
         'vulyk_names.models',
-        'vulyk_names.static',
-        'vulyk_names.views'
+        'vulyk_names.static'
     ],
     package_dir={'vulyk_names':
                  'vulyk_names'},
@@ -45,10 +44,9 @@ setup(
         'License :: OSI Approved :: MIT License',
         'Natural Language :: English',
         "Programming Language :: Python :: 2",
-        'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 3.5',
     ],
 )
